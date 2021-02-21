@@ -18,12 +18,12 @@ html(lang='en')
               a.navbar-brand(href='/') Authentication 
             #navbar.navbar-collapse.collapse
               ul.nav.navbar-nav
-                li
-                  a(href='/') Home
-                li
+                li(class=(title=="Application" ? 'active':'' ))
+                  a(href='/') Application
+                li(class=(title=="Login" ? 'active':'' ))
                   a(href='/users/login') Login
-                li
-                  a(href='/users/register') Signup
+                li(class=(title=="Register" ? 'active':'' ))
+                  a(href='/users/register') Register
               ul.nav.navbar-nav.navbar-right
                 li
                   span.icon-bar
