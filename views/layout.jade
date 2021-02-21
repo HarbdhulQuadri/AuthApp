@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     title My StartUp
-    link(href='stylesheets/bootstrap.css' rel='stylesheet')
+    link(href='/stylesheets/bootstrap.css' rel='stylesheet')
   
   body
     .navbar-wrapper
@@ -23,12 +23,12 @@ html(lang='en')
                 li
                   a(href='/users/login') Login
                 li
-                  a(href='/user/signup') Signup
+                  a(href='/users/register') Signup
               ul.nav.navbar-nav.navbar-right
                 li
                   span.icon-bar
                   span.icon-bar
-                  a(href='/user/logout') Logout
+                  a(href='/users/logout') Logout
         .container 
          block content
         footer
