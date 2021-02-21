@@ -1,10 +1,8 @@
 extends layout 
 block content 
- h2.page-header Register 
- p Please Register Using the Form Below 
+ h2.page-header LOGIN 
+ p Please lOGIN HERE 
  form(method="post", action="users/register",enctype="multipart/form-data")
- .form-group
-  Label Name
   input.form-control(name="name", type='text',placeholder='Enter Name')
  .form-group
   Label Email
@@ -15,11 +13,5 @@ block content
  .form-group
   Label Password
   input.form-control(name="password", type='password',placeholder='Enter Password')
- .form-group
-  Label Confirm Password
-  input.form-control(name="password2", type='password',placeholder='Confirm Password')
- .form-group
-  Label Profile Picture
-  input.form-control(name="profileimage", type='file')
  input.btn.btn-primary(type="submit",name='submit',value='register')
   
