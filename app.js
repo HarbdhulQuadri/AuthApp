@@ -6,8 +6,10 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 session = require('express-session');
 passport =require("passport");
+expressValidator = require('express-validator');
 localStrategy = require(passport-local).Strategy;
 multer = require("multer");
+var upload = multer({dest :"./uploads"})
 flash= require("connect-flash");
 var mongoose = require(mongoose);
 //connecting to cloud mongoose
