@@ -1,17 +1,14 @@
 extends layout 
 block content 
- h2.page-header LOGIN 
- p Please lOGIN HERE 
- form(method="post", action="users/register",enctype="multipart/form-data")
-  input.form-control(name="name", type='text',placeholder='Enter Name')
- .form-group
-  Label Email
-  input.form-control(name="email", type='email',placeholder='Enter Your Email')
- .form-group
-  Label UserName
-  input.form-control(name="username", type='text',placeholder='Enter UserName')
- .form-group
-  Label Password
-  input.form-control(name="password", type='password',placeholder='Enter Password')
- input.btn.btn-primary(type="submit",name='submit',value='register')
+ h2.page-header Login 
+ p Please  Login Using the Form Below 
+ form(method="post", action="/users/register",enctype="multipart/form-data")
+  .form-group
+   Label UserName
+   input.form-control(name="username", type='text',placeholder='Enter UserName')
+  .form-group
+   Label Password
+   input.form-control(name="password", type='password',placeholder='Enter Password')
+  .form-group
+  input.btn.btn-primary(type="submit",name='submit',value='Login')
   
