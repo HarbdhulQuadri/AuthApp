@@ -1,7 +1,11 @@
 extends layout 
 block content 
  h2.page-header Register 
- p Please Register Using the Form Below 
+ p Please Register Using the Form Below
+ ul.errors
+  if errors
+   each error, i in errors 
+    div.alert.alert-danger #{error.msg}
  form(method="post", action="/users/register",enctype="multipart/form-data")
   .form-group
    Label Name

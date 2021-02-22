@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+
+
 var multer = require('multer');
 var upload = multer({dest: './uploads'});
 /* GET users listing. */
@@ -23,12 +25,19 @@ if (req.file){
   var profileimage = 'noimage.jpg'
 }
 //Validating Form 
-req.checkBody('name','name is required').notEmpty;
+body('name','name is required').notEmpty();
+body('email','name is required').notEmpty();
+body('email','name is required').isEmail();
+body('username','name is required').notEmpty();
+body('password','name is required').notEmpty();
+body('password2','Password do not match').equals(req.body.password);
 
 //Check Errors
-var errors = req.validationErrors();
+var errors = req.validationErrors(req);
 if (errors){
-  console.log('Errors');
+  res.render('register',{
+    errors :errors
+  })
 }else{
   console.log("No Errors");
 }
