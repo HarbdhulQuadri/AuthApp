@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
-
+var router = express.Router();
+var { body, validationResult} = require('express-validator');
 var multer = require('multer');
 var upload = multer({dest: './uploads'});
 /* GET users listing. */
@@ -33,7 +33,7 @@ body('password','name is required').notEmpty();
 body('password2','Password do not match').equals(req.body.password);
 
 //Check Errors
-var errors = req.validationErrors(req);
+const errors = validationResult(req);
 if (errors){
   res.render('register',{
     errors :errors
