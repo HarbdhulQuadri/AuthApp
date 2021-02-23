@@ -18,7 +18,14 @@ var db = mongoose.connection;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+mongoose.connect('mongodb+srv://admin:ishola96@cluster0.pi2rw.mongodb.net/test?retryWrites=true&w=majority')
+  .then(() => {
+    console.log('Successfully connected to MongoDB Atlas!');
+  })
+  .catch((error) => {
+    console.log('Unable to connect to MongoDB Atlas!');
+    console.error(error);
+  });
 var app = express();
 
 // view engine setup
